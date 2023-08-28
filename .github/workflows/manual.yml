@@ -33,4 +33,4 @@ jobs:
       run: echo "Hello ${{ inputs.name }}"
     - name: Commit Hash info
       # run: git log -1 acc656e
-      # run: git log -1 --format="%an %ae%n%cn %ce" acc656e
+      run: git log -1 --format="%an %ae%n%cn %ce" acc656e
