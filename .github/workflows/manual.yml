@@ -31,7 +31,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
-    - name: Commit Hash info
+    - name: Commit Hash info 1
       run: git log -1 acc656e
+    - name: Commit Hash info 2
       run: git log -1 --format="%an %ae%n%cn %ce" d35808e
+    - name: Commit Hash info 3
       run: git log -1 --format="%an %ae" d244784
