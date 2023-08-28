@@ -31,4 +31,4 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
     - name: Commit Hash info
-      run: echo "git log -l --format="%an %ae%n%cn %ce" acc656e
+      run: echo "git log -l --format="%an %ae%n%cn %ce"" acc656e
