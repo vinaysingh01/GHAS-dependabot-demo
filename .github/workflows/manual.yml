@@ -42,13 +42,12 @@ jobs:
       run: git_sha=${{ github.sha }}
       # run: sha=process.env['GITHUB_SHA']
       
-
     - name: show sha value
-      run: echo $git_sha "$git_sha"
+      run: echo $( git_sha )
 
     - name: get hash value
       run: git_hash=$(git rev-parse --short "$GITHUB_SHA")
     
     - name: show hash value
-      run: echo $git_hash "$git_hash"
+      run: echo $(git rev-parse --short "$GITHUB_SHA")
  
