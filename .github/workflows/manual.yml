@@ -39,7 +39,7 @@ jobs:
       run: git log -1 --format="%an %ae" d244784
 
     - name: get sha & hash value
-      run: const sha = process.env['GITHUB_SHA']
+      run: sha=process.env['GITHUB_SHA']
 
     - name: show sha value
       run: echo sha
