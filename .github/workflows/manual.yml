@@ -37,3 +37,16 @@ jobs:
       run: git log -1 --format="%an %ae%n%cn %ce" d35808e
     - name: Commit Hash info 3
       run: git log -1 --format="%an %ae" d244784
+
+    - name: get sha & hash value
+      run: const sha = process.env['GITHUB_SHA']
+
+    - name: show sha value
+      run: echo sha
+
+    - name: get hash value
+      run: hash = sha.substring(0,7)
+    
+    - name: show hash value
+      run: echo hash
+ 
