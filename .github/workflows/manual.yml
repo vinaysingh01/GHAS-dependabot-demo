@@ -42,10 +42,10 @@ jobs:
       run: sha=process.env['GITHUB_SHA']
 
     - name: show sha value
-      run: echo $sha
+      run: echo "$sha"
 
     - name: get hash value
-      run: hash=$sha.substring(0,7)
+      run: hash=sha.substring(0,7)
     
     - name: show hash value
       run: echo $hash
