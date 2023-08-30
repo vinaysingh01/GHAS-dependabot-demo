@@ -40,21 +40,27 @@ jobs:
     #  run: git log -1 --format="%an %ae" d244784
 
     - name: get sha value
-      run: GIT_SHA=${{ github.sha }}
-      
-    - name: show sha value
       run: 
+        GIT_SHA=${{ github.sha }}
         echo $( GIT_SHA )
         echo $GIT_SHA
 
+#    - name: show sha value
+#      run: 
+#        echo $( GIT_SHA )
+#        echo $GIT_SHA
+
     - name: get hash value
-      run: GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
-    
-    - name: show hash value
       run: 
-        echo $(git rev-parse --short "$GITHUB_SHA")
-        echo $( GIT_HASH )
-        echo $GIT_HASH
+        GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
+        echo $( GIT_SHA )
+        echo $GIT_SHA
+    
+#    - name: show hash value
+#      run: 
+#        echo $(git rev-parse --short "$GITHUB_SHA")
+#        echo $( GIT_HASH )
+#        echo $GIT_HASH
 
     #run:
      # using: node16
