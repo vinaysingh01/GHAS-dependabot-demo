@@ -28,7 +28,7 @@ jobs:
 #        GIT_SHA=${{ github.sha }}
 #        echo "sha value is: $GIT_SHA"
 
-   - name: get hash value
+    - name: get hash value
       run: |
         GIT_HASH=$( git rev-parse "$GITHUB_SHA" )
         echo "hash value is: $GIT_HASH"
