@@ -38,14 +38,14 @@ jobs:
     
     - name: consolidated
       run: |
-        GIT_HASH=$( git rev-parse "$GITHUB_SHA" )
-        echo "hash value is: $GIT_HASH"
+        #GIT_HASH=$( git rev-parse "$GITHUB_SHA" )
+        #echo "hash value is: $GIT_HASH"
         #git log -1 --format="%an %ae" "$GIT_HASH"
         git log -1 --format="%an %ae" "$GITHUB_SHA"
 
 
-        COMMITTER_ID=$( git log -1 --format="%an" "$GIT_HASH" )
-        COMMITTER_EMAIL=$( git log -1 --format="%ae" "$GIT_HASH" )
+        COMMITTER_ID=$( git log -1 --format="%an" "$GITHUB_SHA" )
+        COMMITTER_EMAIL=$( git log -1 --format="%ae" "$GITHUB_SHA" )
         
         echo "Committer's id is: $COMMITTER_ID"
         echo "Committer's email is: $COMMITTER_EMAIL"
