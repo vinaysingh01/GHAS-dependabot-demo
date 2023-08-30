@@ -43,11 +43,11 @@ jobs:
       
     - name: show sha value
       run: 
-        #echo $( GIT_SHA )
+        echo $( GIT_SHA )
         echo $GIT_SHA
 
     - name: get hash value
-      run: GIT_HASH=${{ git rev-parse --short "$GITHUB_SHA" }}
+      run: GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
     
     - name: show hash value
       run: 
