@@ -32,28 +32,21 @@ jobs:
     - uses: actions/checkout@v2
     #- name: Send greeting
     #  run: echo "Hello ${{ inputs.name }}"
-    #- name: Commit Hash info 1
-    #  run: git log -1 acc656e
-    #- name: Commit Hash info 2
-    #  run: git log -1 --format="%an %ae%n%cn %ce" d35808e
-    #- name: Commit Hash info 3
-    #  run: git log -1 --format="%an %ae" d244784
+    - name: Commit Hash info 1
+      run: git log -1 acc656e
+    - name: Commit Hash info 2
+      run: git log -1 --format="%an %ae%n%cn %ce" d35808e
+    - name: Commit Hash info 3
+      run: git log -1 --format="%an %ae" d244784
 
     - name: get sha value
       run: |
         GIT_SHA=${{ github.sha }}
         echo "sha value is: $GIT_SHA"
-        echo "sha value: $( GIT_SHA )"
-        
-#    - name: show sha value
-#      run: 
-#        echo $( GIT_SHA )
-#        echo $GIT_SHA
 
     - name: get hash value
       run: |
         GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
-        echo "hash value: $( GIT_HASH )"
         echo "hash value is: $GIT_HASH"
     
 #    - name: show hash value
