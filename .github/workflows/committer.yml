@@ -20,8 +20,8 @@ jobs:
     # Runs a single command using the runners shell
     - uses: actions/checkout@v1
 
-    - name: Commit Hash info 3
-      run: git log -1 --format="%an %ae" d244784
+#    - name: Commit Hash info 3
+#      run: git log -1 --format="%an %ae" d244784
 
 #    - name: get sha value
 #      run: |
@@ -39,8 +39,8 @@ jobs:
         echo "hash value is: $GIT_HASH"
         git log -1 --format="%an %ae" "$GIT_HASH"
 
-        COMMITTER_ID=$( git log -1 --format="%an" "$GIT_HASH")
-        COMMITTER_EMAIL=$( git log -1 --format="%ae" "$GIT_HASH")
+        COMMITTER_ID=$( git log -1 --format="%an" "$GIT_HASH" )
+        COMMITTER_EMAIL=$( git log -1 --format="%ae" "$GIT_HASH" )
         
         echo "Committer's id is: $COMMITTER_ID"
         echo "Committer's email is: $COMMITTER_EMAIL"
