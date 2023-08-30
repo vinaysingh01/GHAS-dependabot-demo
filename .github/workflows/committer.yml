@@ -30,7 +30,7 @@ jobs:
 
     - name: get hash value
       run: |
-        #GIT_HASH=$( git rev-parse "$GITHUB_SHA" )
+        # GIT_HASH=$( git rev-parse "$GITHUB_SHA" )
         GIT_HASH=$( $GITHUB_SHA )
         echo "hash value is: $GIT_HASH"
         
