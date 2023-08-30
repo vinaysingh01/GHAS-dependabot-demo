@@ -33,11 +33,22 @@ jobs:
     #- name: Send greeting
     #  run: echo "Hello ${{ inputs.name }}"
     - name: Commit Hash info 1
-      run: git log -1 acc656e
+      run: |
+        git log -1 acc656e
+        git log -1 --format="%an %ae%n%cn %ce" acc656e
+        git log -1 --format="%an %ae" acc656e
+        
     - name: Commit Hash info 2
-      run: git log -1 --format="%an %ae%n%cn %ce" d35808e
+      run: |
+        git log -1 d35808e
+        git log -1 --format="%an %ae%n%cn %ce" d35808e
+        git log -1 --format="%an %ae" d35808e
+        
     - name: Commit Hash info 3
-      run: git log -1 --format="%an %ae" d244784
+      run: |
+        git log -1 d244784
+        git log -1 --format="%an %ae%n%cn %ce" d244784
+        git log -1 --format="%an %ae" d244784
 
     - name: get sha value
       run: |
