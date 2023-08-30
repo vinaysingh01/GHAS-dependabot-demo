@@ -40,7 +40,7 @@ jobs:
     #  run: git log -1 --format="%an %ae" d244784
 
     - name: get sha value
-      run: 
+      run: |
         GIT_SHA=${{ github.sha }}
         echo "sha value is: $GIT_SHA"
         echo "sha value: $( GIT_SHA )"
@@ -51,7 +51,7 @@ jobs:
 #        echo $GIT_SHA
 
     - name: get hash value
-      run: 
+      run: |
         GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
         echo "hash value: $( GIT_HASH )"
         echo "hash value is: $GIT_HASH"
