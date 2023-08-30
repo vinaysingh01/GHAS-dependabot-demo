@@ -39,8 +39,8 @@ jobs:
         echo "hash value is: $GIT_HASH"
         git log -1 --format="%an %ae" "$GIT_HASH"
 
-        COMMITTER_NAME=git log -1 --format="%an" "$GIT_HASH"
-        COMMITTER_EMAIL=git log -1 --format="%ae" "$GIT_HASH"
+        COMMITTER_NAME=$( git log -1 --format="%an" "$GIT_HASH")
+        COMMITTER_EMAIL=$( git log -1 --format="%ae" "$GIT_HASH")
         
         echo "Committer's name is: $COMMITTER_NAME"
         echo "Committer's email is: $COMMITTER_EMAIL"
