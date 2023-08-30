@@ -35,7 +35,7 @@ jobs:
     
     - name: consolidated
       run: |
-        GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
+        GIT_HASH=$( git rev-parse "$GITHUB_SHA" )
         echo "hash value is: $GIT_HASH"
         git log -1 --format="%an %ae" "$GIT_HASH"
 
