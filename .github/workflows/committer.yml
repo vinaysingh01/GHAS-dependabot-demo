@@ -37,7 +37,7 @@ jobs:
       run: |
         GIT_HASH=$( git rev-parse --short "$GITHUB_SHA" )
         echo "hash value is: $GIT_HASH"
-        git log -1 --format="%an %ae" $GIT_HASH
+        git log -1 --format="%an %ae" "$GIT_HASH"
 
         COMMITTER_NAME=git log -1 --format="%an"
         COMMITTER_EMAIL=git log -1 --format="%ae"
