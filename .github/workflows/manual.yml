@@ -43,7 +43,7 @@ jobs:
       
     - name: show sha value
       run: 
-        echo $( GIT_SHA )
+        #echo $( GIT_SHA )
         echo $GIT_SHA
 
     - name: get hash value
@@ -54,3 +54,8 @@ jobs:
         echo $(git rev-parse --short "$GITHUB_SHA")
         echo $( GIT_HASH )
         echo $GIT_HASH
+
+    runs:
+      using: node16
+      main: sha-hash.js
+    
