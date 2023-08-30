@@ -5,7 +5,8 @@ name: Manual workflow
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  workflow_dispatch:
+  push:
+  #workflow_dispatch:
     # Inputs the workflow accepts.
 #    inputs:
 #      name:
@@ -55,7 +56,7 @@ jobs:
         echo $( GIT_HASH )
         echo $GIT_HASH
 
-    runs:
-      using: node16
-      main: sha-hash.js
+    #run:
+     # using: node16
+     # main: sha-hash.js
     
